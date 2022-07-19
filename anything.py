@@ -1,7 +1,11 @@
+from datetime import datetime
 import speech_recognition as sr
 import googletrans
 import pyttsx3
 import pywhatkit
+import datetime
+import wikipedia
+import pyjokes
 
 
 r = sr.Recognizer()
@@ -47,8 +51,28 @@ def run_alexa():
         song = command.replace('play','')
         talk('playing'+ song)
         pywhatkit.playonyt(song)
+    elif 'time' in command:
+        time = datetime.datetime.now().strftime('%I:%M %p')
+        print(time)
+        talk('Current time is ' + time)
+    elif 'tell me about ' in command:
+        person = command.replace('tell me about', '')
+        info = wikipedia.summary(person, 3)
+        print(info)
+        talk(info)
+    elif 'date' in command :
+        talk('sorry ,i have a date with wifi')
+    elif 'are you single' in command:
+        talk('i have a girlfriend')
+    elif 'joke' in command:
+        print(pyjokes.get_joke())
+        talk(pyjokes.get_joke())
+    
+    else:
+        talk('Please say the command again.')
 
-run_alexa()        
+while True:
+ run_alexa()        
 
 
 
