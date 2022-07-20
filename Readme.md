@@ -1,3 +1,3 @@
 # Speech to Text API
 
-Converts audio to text
+Converts audio  to text
