@@ -102,6 +102,7 @@ if __name__ == "__main__":
                 elif "close" in query:
                     from oAPP import closeWebApp
                     closeWebApp(query)
+        
                 elif "play bg music" in query:
                     speak("playing..")
                     winsound.PlaySound('file_example_WAV_2MG.wav',winsound.SND_ASYNC | winsound.SND_ALIAS)
