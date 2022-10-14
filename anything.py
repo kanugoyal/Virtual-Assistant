@@ -71,7 +71,7 @@ def pdf_reader():
 
         
 def whatsAppmsg():
-      pywhatkit.sendwhatmsg('7976694252', 'hey! this is kanu ka Alexa :p')
+      pywhatkit.sendwhatmsg('7976989128', 'hey! this is kanu ka Alexa :p')
       
 def greet():
     t_hour = datetime.datetime.now().hour
@@ -150,7 +150,7 @@ if __name__ == "__main__":
         elif 'read pdf' in command:
           pdf_reader()
         elif 'WhatsApp' in command:
-          pywhatkit.sendwhatmsg('+919002255002', 'hey! this is kanu ka Alexa :p',16,40)
+          pywhatkit.sendwhatmsg('+917976989128', 'hey! this is kanu ka Alexa :p',16,40)
         elif 'send email' in command:
           try:
             talk("what should i mail")

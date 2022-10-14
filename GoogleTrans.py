@@ -40,9 +40,9 @@ def speak(audio):
 
 def LangTrans(query):
     if "translate" in query:
-        query = query.replace("jarvis","")
+        query = query.replace("alexa","")
         query = query.replace("translate","")
-        query = query.replace("jarvis translate","")
+        query = query.replace("alexa translate","")
         t_lang = 'es'
         translator = googletrans.Translator()
         translated = translator.translate(query , dest= t_lang)

@@ -30,7 +30,7 @@ def speak(audio):
     engine.runAndWait()
 
 def WhatsAPP(query):
-    query = query.replace("jarvis","")
+    query = query.replace("Alexa","")
     query = query.replace("whatsapp","")
     query = query.replace("whatsapp message","")
     pywhatkit.sendwhatmsg(6375154236,"padhle ya soja", 15,42)

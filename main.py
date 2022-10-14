@@ -69,7 +69,7 @@ if __name__ == "__main__":
             while True:
                 query = takecommand().lower()
                 if "go to sleep" in query:
-                    speak("ok sir,you can call me anytime")
+                    speak("ok,you can call me anytime")
                     break
                 
                 elif "hello" in query:
@@ -157,7 +157,7 @@ if __name__ == "__main__":
                     audioBook(query)
                 elif "remember that" in query:
                     rememberMsg = query.replace("remember that","")
-                    rememberMsg = query.replace("jarvis","")
+                    rememberMsg = query.replace("Alexa","")
                     speak("you told me to remember that"+ rememberMsg )
                     remember = open("remember.txt", "a")
                     remember.write(rememberMsg)
@@ -211,7 +211,7 @@ if __name__ == "__main__":
                     song = os.startfile(os.path.join(music))
                     sleep(15)
                 elif "finally sleep" in query:
-                    speak("bye sir, going to rest sir ")
+                    speak("bye sir, going to rest tata ")
                     exit()
 
 
