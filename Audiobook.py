@@ -30,9 +30,9 @@ def speak(audio):
 
 def audioBook(query):
     if "read" in query:
-        query = query.replace("alexa","")
+        query = query.replace("Robo","")
         query = query.replace("read","")
-        query = query.replace("alexa read","")
+        query = query.replace("robo read","")
         book = open('os.pdf', 'rb')
         pdfReader = PyPDF2.PdfFileReader(book)
         pages = pdfReader.numPages

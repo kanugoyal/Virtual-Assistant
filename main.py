@@ -62,7 +62,7 @@ def alarm(query):
 if __name__ == "__main__":
     while True:
         query = takecommand().lower()
-        if "wake up " in query:
+        if "wake up kari " in query:
             from GreetMe import greetMe
             greetMe()
 
@@ -91,7 +91,7 @@ if __name__ == "__main__":
                       speak("What should I say?")
                       content = takecommand()
                       to = d   
-                      sendEmail(to, content)
+                      sendEmail(to, content).
                       speak("Email has been sent !")
                   except Exception as e:
                       print(e)
@@ -157,7 +157,7 @@ if __name__ == "__main__":
                     audioBook(query)
                 elif "remember that" in query:
                     rememberMsg = query.replace("remember that","")
-                    rememberMsg = query.replace("Alexa","")
+                    rememberMsg = query.replace("kari","")
                     speak("you told me to remember that"+ rememberMsg )
                     remember = open("remember.txt", "a")
                     remember.write(rememberMsg)

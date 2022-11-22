@@ -47,7 +47,7 @@ def take_command():
             command = r.recognize_google(voice)
             
             if 'alexa' in command:
-                command = command.replace('alexa', '')
+                command = command.replace('kari', '')
 
         
                 talk(command)
@@ -71,7 +71,7 @@ def pdf_reader():
 
         
 def whatsAppmsg():
-      pywhatkit.sendwhatmsg('7976989128', 'hey! this is kanu ka Alexa :p')
+      pywhatkit.sendwhatmsg('7976989128', 'hey! this is kanu ka kari :p')
       
 def greet():
     t_hour = datetime.datetime.now().hour
@@ -92,7 +92,7 @@ def sendemail(to, content):
     server.ehlo()                                   #to connect  our server to gmail server
     server.starttls()
     server.login(g,p)
-    server.sendmail(g,d, 'Mail from kanu ka Alexa' )
+    server.sendmail(g,d, 'Mail from kanu ka Kari' )
     server.close()
 
 def trans_text():
