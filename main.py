@@ -62,7 +62,7 @@ def alarm(query):
 if __name__ == "__main__":
     while True:
         query = takecommand().lower()
-        if "wake up kari " in query:
+        if "wake up " in query:
             from GreetMe import greetMe
             greetMe()
 
@@ -91,7 +91,7 @@ if __name__ == "__main__":
                       speak("What should I say?")
                       content = takecommand()
                       to = d   
-                      sendEmail(to, content).
+                      sendEmail(to, content)
                       speak("Email has been sent !")
                   except Exception as e:
                       print(e)
@@ -138,7 +138,7 @@ if __name__ == "__main__":
                 elif "pause" in query:
                     pyautogui.press("k")
                     speak("paused")
-                elif "play" in query:
+                elif "video play" in query:
                     pyautogui.press("k")
                     speak("video play")
                 elif "mute" in query:
@@ -157,7 +157,7 @@ if __name__ == "__main__":
                     audioBook(query)
                 elif "remember that" in query:
                     rememberMsg = query.replace("remember that","")
-                    rememberMsg = query.replace("kari","")
+                    rememberMsg = query.replace("Ai","")
                     speak("you told me to remember that"+ rememberMsg )
                     remember = open("remember.txt", "a")
                     remember.write(rememberMsg)
@@ -205,7 +205,7 @@ if __name__ == "__main__":
                 elif "time" in query:
                     strTime = datetime.datetime.now().strftime("%H:%M")
                     speak(f"the current time is {strTime}")
-                elif "play music" in query:
+                elif "music" in query:
                     speak('playing..')
                     music = "C:\\Users\\Anamika Computer\\Music"
                     song = os.startfile(os.path.join(music))
