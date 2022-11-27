@@ -21,7 +21,7 @@ def takecommand():
 query =  takecommand().lower()
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty('voices')
-engine.setProperty("voice", voices[1].id)
+engine.setProperty("voice", voices[0].id)
 engine.setProperty('rate', 170)
 
 def speak(audio): 
@@ -33,7 +33,7 @@ def audioBook(query):
         query = query.replace("Robo","")
         query = query.replace("read","")
         query = query.replace("robo read","")
-        book = open('os.pdf', 'rb')
+        book = open('ROBO.pdf', 'rb')
         pdfReader = PyPDF2.PdfFileReader(book)
         pages = pdfReader.numPages
         print(pages)

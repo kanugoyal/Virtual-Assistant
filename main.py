@@ -20,7 +20,7 @@ d = destination
 
 engine = pyttsx3.init("sapi5")
 voices = engine.getProperty('voices')
-engine.setProperty("voice", voices[1].id)
+engine.setProperty("voice", voices[0].id)
 engine.setProperty('rate', 170)
 
 def speak(audio): 
@@ -205,7 +205,7 @@ if __name__ == "__main__":
                 elif "time" in query:
                     strTime = datetime.datetime.now().strftime("%H:%M")
                     speak(f"the current time is {strTime}")
-                elif "music" in query:
+                elif "play music" in query:
                     speak('playing..')
                     music = "C:\\Users\\Anamika Computer\\Music"
                     song = os.startfile(os.path.join(music))
